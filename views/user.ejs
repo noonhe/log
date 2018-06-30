@@ -1,0 +1,28 @@
+<%include partials/header%>
+    <title>داشبورد کاربر</title>
+    </head>
+    <body>
+        <%include partials/navUser%>
+
+        <div class="container mt-5">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>نام مقاله</th>
+                            <th>نویسنده</th>
+                            <th>تاریخ ایجاد</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     <% articles.forEach(function(article){%>
+                         <tr>
+                             <td><a href="/article/<%=article.id%>"> <%=article.title%> </a></td>
+                             <td><%=article.author%></td>
+                             <td><%=article.publishDate%></td>
+                         </tr>
+                     <%})%>
+                    </tbody>
+                </table>
+             </div>
+    </body>
+<%include partials/footer%>
